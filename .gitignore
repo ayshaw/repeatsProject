@@ -1,4 +1,6 @@
 alignments
 rCode/*.txt
 cCode/plmc_repeats
+apoE
+PF00023
 pyCode/*.txt
