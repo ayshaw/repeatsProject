@@ -24,6 +24,8 @@ MSA.n.neighbours(msa=msa, n=1,outfile=paste('rOutput/',pfam,"_2reps_withgaps.txt
 ### edit file for input to plm.c code ###
 msa<-readAlignment(paste('rOutput/',pfam,"_2reps_withgaps.txt",sep=''))
 msa<-msa.removed.gaps(msa)
+xs = apply(msa,1,function(x){sum(which(x=='X'))})
+msa = msa[-which(xs>0),]
 nom<-rownames(msa)
 outfile = paste('rOutput/',pfam,'_2reps_py_input.txt',sep='')
 for (nom_iter in nom) {
