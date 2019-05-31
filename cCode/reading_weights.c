@@ -5,13 +5,12 @@
 #define line_size 100
 #define num_sequences 40 /*91143*/
 int main () {
-	float weights[num_sequences];
+	double weights[num_sequences];
 	FILE * file; 
-	file = fopen("pyCode/numbers.txt","r");
+	file = fopen("/Users/adashaw/Dropbox (Harvard University)/Debbie-Ada/repeatsProject/PF00023/pyOutput/PF00023_weights_plm_input.txt","r");
 	char line[line_size];
 	int i = 0;
 	
-	float tmp;
 	if (!file) {
 		printf("\nno file exists\n");
 	} else {
@@ -19,10 +18,10 @@ int main () {
 	}
 	
 	while(fgets(line, line_size, file)) {
-	   if(sscanf(line, "%f", &tmp) == 2) {
+	   if(sscanf(line, "%lf", &weights[i]) == 2) {
 	      ++i;
 	   }
-	   printf("weights: %0.20f \n",tmp);
+	   printf("weights: %lf \n",weights[i]);
 	   printf("line: %s \n", line);
 	}
 	return 0;
