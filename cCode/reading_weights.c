@@ -3,12 +3,12 @@
 #include <string.h>
 #include <limits.h>
 #define line_size 100
-#define num_sequences 40 /*91143*/
+#define num_sequences 91058 /*91143*/
 int main () {
-	double weights[num_sequences];
+	double *weights = (double *) malloc(91058 * sizeof(double));
 	FILE * file; 
 	file = fopen("/Users/adashaw/Dropbox (Harvard University)/Debbie-Ada/repeatsProject/PF00023/pyOutput/PF00023_weights_plm_input.txt","r");
-	char line[line_size];
+	char *line = (char *) malloc(line_size * sizeof(char));
 	int i = 0;
 	
 	if (!file) {
@@ -24,5 +24,7 @@ int main () {
 	   printf("weights: %lf \n",weights[i]);
 	   printf("line: %s \n", line);
 	}
+	free(weights);
+	free(line);
 	return 0;
 }

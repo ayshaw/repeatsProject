@@ -38,3 +38,5 @@ for (nom_iter in nom) {
 msa <-msa2num(msa)
 wid <- weight.idREP(msa)
 write.table(wid, file=paste('rOutput/',pfam,"_weights_py_input.txt",sep=''), row.names=TRUE, col.names=FALSE)
+w_heni_repeat = wid*Henikoff.w(msa,fmarg=aa.freq.marg(M=msa))
+write.table(w_heni_repeat, file=paste('rOutput/',pfam,"_heniweights_py_input.txt",sep=''), row.names=TRUE, col.names=FALSE)
