@@ -7,7 +7,7 @@
 int main () {
 	double *weights = (double *) malloc(num_sequences * sizeof(double));
 	FILE * file; 
-	file = fopen("/Users/adashaw/Dropbox (Harvard University)/Debbie-Ada/repeatsProject/PF00023/pyOutput/PF00023_weights_plm_input.txt","r");
+	file = fopen("/Users/adashaw/Dropbox (Harvard University)/Debbie-Ada/repeatsProject/PF00023/pyOutput/PF00023_ones_plm_input.txt","r");
 	char *line = (char *) malloc(line_size * sizeof(char));
 	int i = 0;
 	
@@ -18,7 +18,7 @@ int main () {
 	}
 	
 	while(fgets(line, line_size, file)) {
-	   if(sscanf(line, "%lf", &weights[i]) == 2) {
+	   if(sscanf(line, "%lf",&weights[i]) != EOF) {
 	      ++i;
 	   }
 	   printf("weights: %lf \n",weights[i]);
