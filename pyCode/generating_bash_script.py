@@ -13,10 +13,10 @@ start_lines = ['''#!/bin/bash
 '''
 ,'cCode/plmc/bin/plmc -o ']
 lines = start_lines[0] + '\n' +\
-        directory + start_lines[1] + directory + pfam + '/cOutput/' + pfam + '.model -c ' +\
-        directory + pfam + '/cOutput/' + pfam + '_ECscores.txt -rw ' +\
-        directory + pfam + '/pyOutput/' + pfam + '_weights_plm_input.txt ' +\
+        directory + start_lines[1] + directory + pfam + '/cOutput/' + pfam + 'heni.model -c ' +\
+        directory + pfam + '/cOutput/' + pfam + '_heniECscores.txt -hw ' +\
+        directory + pfam + '/pyOutput/' + pfam + '_heniweights_plm_input.txt ' +\
         directory + pfam + '/pyOutput/' + pfam + '_2reps_plm_input.txt'
-with open(directory + pfam + '/'+ pfam  +'_submit.sh','w') as file:
+with open(directory + pfam + '/'+ pfam  +'_henisubmit.sh','w') as file:
     file.writelines(lines)
 
