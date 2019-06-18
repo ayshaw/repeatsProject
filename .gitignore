@@ -2,5 +2,6 @@ alignments
 rCode/*.txt
 cCode/plmc_repeats
 apoE
+APOE_HUMAN*
 PF00023
 pyCode/*.txt
