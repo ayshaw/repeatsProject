@@ -4,4 +4,8 @@ cCode/plmc_repeats
 apoE
 APOE_HUMAN*
 PF00023
+PF00023/*
+PF00023/rOutput/*
+PF00023/cOutput/*
+PF00023/pyOutput/*
 pyCode/*.txt

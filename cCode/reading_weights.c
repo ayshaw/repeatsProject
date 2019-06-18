@@ -5,7 +5,7 @@
 #define line_size 100
 #define num_sequences 91058 /*91143*/
 int main () {
-	double *weights = (double *) malloc(91058 * sizeof(double));
+	double *weights = (double *) malloc(num_sequences * sizeof(double));
 	FILE * file; 
 	file = fopen("/Users/adashaw/Dropbox (Harvard University)/Debbie-Ada/repeatsProject/PF00023/pyOutput/PF00023_ones_plm_input.txt","r");
 	char *line = (char *) malloc(line_size * sizeof(char));
