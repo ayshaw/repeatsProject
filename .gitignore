@@ -17,5 +17,8 @@ PF00023/rOutput/*
 ANK_HUMAN*
 PF00023/cOutput/*
 PF00023/pyOutput/*
+<<<<<<< HEAD
+=======
 
 pyCode/*.txt
+>>>>>>> dbda58d463e318b96055b959f0b88ec70166c915

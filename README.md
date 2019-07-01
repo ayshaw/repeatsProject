@@ -9,9 +9,10 @@ Directions:
 1) Download and install DCAforR:
 https://github.com/roespada/DCAforRpackage/blob/master/DCAforR/
 2) Download and install modified plmc code: https://github.com/ayshaw/plmc
-2) run rPipelineRepeats.R - change the working directory, pfam, pfam_dir
-3) run pyPipelineRepeats.ipynb - change the pfam, pfam_dir
-3) run generating_bash_scripts.py - change pfam, pfam_dir
-4) submit the generated bash script above
+3) modify and run splicing_PvLEA_repeats.ipynb - mostly change the pfam, pfam_dir, repeat starts, repeat length, and specify where the full alignment is.
+4) run rPipelineRepeats.R - change the working directory, pfam, pfam_dir
+5) run pyPipelineRepeats.ipynb - change the pfam, pfam_dir
+6) run generating_bash_scripts.py - change pfam, pfam_dir
+7) submit the generated bash script above
 
 
