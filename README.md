@@ -9,7 +9,7 @@ set-up:
 1) Download and install DCAforR:
 https://github.com/roespada/DCAforRpackage/
 2) Download and install modified plmc code: https://github.com/ayshaw/plmc
-3) clone this github repository and put your alignment working directory in the directory
+3) clone repeatsProject directory and place your alignment directory in this directory
 
 Old directions:
 1) modify and run splicing_repeats-general.ipynb - specify the pfam, pfam_dir, repeat starts, repeat length, and specify where the full alignment is.
