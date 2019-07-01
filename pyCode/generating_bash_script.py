@@ -1,7 +1,7 @@
 import os
 directory = os.getcwd().split('pyCode')[0]+'/'
-pfam = 'PvLEA4'
-pfam_dir = 'PvLEA4_full_b0.35'
+pfam = sys.argv[1]
+pfam_dir = sys.arv[2]
 start_lines = ['''#!/bin/bash
 #SBATCH -p priority                         # Partition to run in
 #SBATCH -t 0-16:00                          # Runtime in D-HH:MM format
