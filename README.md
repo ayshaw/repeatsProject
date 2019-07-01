@@ -7,7 +7,7 @@ To run my example, you make sure you have the PF00023 alignments from https://gi
 
 set-up:
 1) Download and install DCAforR:
-https://github.com/roespada/DCAforRpackage/blob/master/DCAforR/
+https://github.com/roespada/DCAforRpackage/
 2) Download and install modified plmc code: https://github.com/ayshaw/plmc
 3) clone this github repository and put your alignment working directory in the directory
 
