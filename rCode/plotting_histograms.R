@@ -7,7 +7,7 @@ print(args)
 working_dir = args[1]
 setwd(working_dir)
 pfam = args[2]
-source('/rCode/weight.idREP.R')
+source('../rCode/weight.idREP.R')
 file = paste0('/pyOutput/',pfam,'_2reps_plm_input.txt')
 png(paste0('/rOutput/',pfam,'_histogram.png'),height=600,width=600)
 msa<-readAlignment(file)

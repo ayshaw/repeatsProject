@@ -23,13 +23,13 @@ weight.idREP_ada<-function(msa.real,file){
   
   hrr_plot=density(dist.random, bw=0.1)
   h1_plot=density(dist.primeros, bw=0.1)
-  par(mfrow=c(1,2),oma=c(3.5,3.5,2,0),mar=c(3.5,3.5,1.5,1.5))
+  par(mfrow=c(1,2),oma=c(3.5,4,2,0),mar=c(3.5,4,1.5,1.5))
   hrr<-hist(dist.random,breaks=bks,plot=T,col=rgb(0,0,1,0.2),xlim=c(0,1),freq=F,main='',xlab='%ID',ylab = 'density')
   par(new=T)
   h1<-hist(dist.primeros,breaks=bks,plot=T,col=rgb(0,1,0,0.2),add=T,freq=F,xlab='',ylab='',main='',axes=F)
   legend("top", legend=c("first neighboring repeats", "Random pairing of repeats"), fill=c(rgb(0,1,0), rgb(0,0,1)), bty="n") 
   
-  plot(hrr_plot,xlab='%ID',ylab = 'density',col='blue',pch=4,xlim=c(0,1),ylim=c(0,4),main='',bty="n")
+  plot(hrr_plot,xlab='%ID',col='blue',pch=4,xlim=c(0,1),ylim=c(0,4),main='',bty="n")
   par(new=T)
   plot(h1_plot,xlab='',ylab = '',col='green',pch=1,xlim=c(0,1),ylim=c(0,4),main='',bty="n",axes=F)
   title(file,outer=TRUE,cex.main=2)
