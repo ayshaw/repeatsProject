@@ -7,7 +7,7 @@ To run an example, you make sure you have the PF00023 alignments from https://gi
 set-up:
 1) Download and install DCAforR:
 https://github.com/roespada/DCAforRpackage/
-2) Download and install modified plmc code: https://github.com/ayshaw/plmc
+2) Download and install modified EvCouplings plmc code: https://github.com/ayshaw/plmc (originally from https://github.com/debbiemarkslab/plmc)
 3) clone repeatsProject directory and place your alignment directory in this directory
 
 Old directions:
