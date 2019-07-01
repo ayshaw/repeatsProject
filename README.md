@@ -12,12 +12,12 @@ https://github.com/roespada/DCAforRpackage/blob/master/DCAforR/
 3) clone this github repository
 
 Old directions:
-1) modify and run splicing_PvLEA_repeats.ipynb - mostly change the pfam, pfam_dir, repeat starts, repeat length, and specify where the full alignment is.
+1) modify and run splicing_repeats-general.ipynb - mostly change the pfam, pfam_dir, repeat starts, repeat length, and specify where the full alignment is.
 2) run script rPipelineRepeats.R - change the working directory, pfam, pfam_dir
 3) run notebook pyPipelineRepeats.ipynb - change the pfam, pfam_dir
 4) run script generating_bash_scripts.py - change pfam, pfam_dir
 5) submit the generated bash script above
 
 New and streamlined directions:
-1) modify and run splicing_PvLEA_repeats.ipynb - mostly change the pfam, pfam_dir, repeat starts, repeat length, and specify where the full alignment is.
-1) run in command line: RunningRepeats.py [directory of your repeats alignment] [prefix of output files]
+1) modify and run splicing_repeats-general.ipynb - mostly change the pfam, pfam_dir, repeat starts, repeat length, and specify where the full alignment is.
+2) run in command line: RunningRepeats.py [directory of your repeats alignment] [prefix of output files]
