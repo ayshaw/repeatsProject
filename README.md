@@ -19,7 +19,7 @@ Old directions:
 
 New and streamlined directions:
 1) modify and run splicing_repeats-general.ipynb - specify the pfam, pfam_dir, repeat starts, repeat length, and specify where the full alignment is.
-2) cd into repeatsProject repo and run in command line: <br>
-bash bashCode/runningPipeline.sh [directory of your repeats alignment] [prefix of output files]
+2) cd into repeatsProject/bashCode repo and run in command line: <br>
+bash runningPipeline.sh [directory of your repeats alignment] [prefix of output files]
 
 note: I used the names pfam and pfam_dir because this was originally built to run the PF00023 alignment
