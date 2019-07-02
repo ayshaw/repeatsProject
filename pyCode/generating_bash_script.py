@@ -1,6 +1,6 @@
 import sys
 import os
-directory = os.getcwd().split('/pyCode')[0]
+directory = os.path.split(os.getcwd())[0]
 pfam_dir = sys.argv[1]
 pfam = sys.argv[2]
 start_lines = ['''#!/bin/bash
@@ -21,4 +21,10 @@ lines = start_lines[0] + '\n' +\
         pfam_dir + '/pyOutput/' + pfam + '_2reps_plm_input.txt'
 with open(pfam_dir + '/'+ pfam  +'_cor_submit.sh','w+') as file:
     file.writelines(lines)
-
+lines_uncor = start_lines[0] + '\n' +\
+        directory + start_lines[1] + pfam_dir + '/cOutput/' + pfam + '_uncor.model -c ' +\
+        pfam_dir + '/cOutput/' + pfam + '_ECscores_uncor.txt' +\
+        pfam_dir + '/pyOutput/' + pfam + '_2reps_plm_input.txt'
+with open(pfam_dir + '/'+ pfam + '_uncor_submit.sh','w+') as file:
+	file.writelines(lines_uncor)
+print('------bash script successfuly generated!------')
