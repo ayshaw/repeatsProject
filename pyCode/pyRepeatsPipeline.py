@@ -15,11 +15,11 @@ pfam = sys.argv[2]
 try:
     os.mkdir(pfam_dir+'/pyOutput/')
 except: 
-    print('pyOutput directory already exists')
+    next
 try: 
     os.mkdir(pfam_dir+'/cOutput/')
 except:    
-    print('cOuptut directory already exists')
+    next
     
 # INPUT: PF0023_weights_py_input.txt
 df_repweights = pd.read_csv(pfam_dir+'/rOutput/'+pfam+'_weights_py_input.txt',header=None,delimiter='\s',names=['names','weights'])
@@ -61,11 +61,11 @@ with open(msa_file,'r') as file:
 ############ ^uncomment for PF00023^ ###########
 
 ## OUTPUT: PF00023_2reps_plm_input.txt
-with open(directory + pfam_dir + '/pyOutput/' + pfam + '_2reps_plm_input.txt','w') as file:
+with open(pfam_dir + '/pyOutput/' + pfam + '_2reps_plm_input.txt','w') as file:
     file.writelines(all_lines)
     
 # INPUT: PF0023_weights_py_input.txt
-df_henirepweights = pd.read_csv(directory+pfam_dir+'/rOutput/'+pfam+'_heniweights_py_input.txt',header=None,delimiter='\s',names=['names','weights'])
+df_henirepweights = pd.read_csv(pfam_dir+'/rOutput/'+pfam+'_heniweights_py_input.txt',header=None,delimiter='\s',names=['names','weights'])
 df_henirepweights['names'] = df_henirepweights['names'].str.replace('"','')
 df_henirepweights['sequence_id'] = df_henirepweights['names'].str.split(r"/[\d']",n=1,expand=True)[0]
 tmp = 'whatever'
@@ -89,4 +89,5 @@ df_henirepweights['repeat_num'] = tmp2
 ############ ^uncomment for PF00023^ ###########
 
 ## OUTPUT: PF00023_heniweights_plm_input.txt
-df_henirepweights[['weights']].to_csv(directory+pfam_dir+'/pyOutput/'+pfam+'_heniweights_plm_input.txt',header=None,index=False)
+df_henirepweights[['weights']].to_csv(pfam_dir+'/pyOutput/'+pfam+'_heniweights_plm_input.txt',header=None,index=False)
+print('\n-------pyRepeatsPipeline successful!!!------')

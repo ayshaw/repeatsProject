@@ -1,6 +1,7 @@
+import sys
 import os
 directory = os.getcwd().split('/pyCode')[0]
-pfam_dir = sys.arv[1]
+pfam_dir = sys.argv[1]
 pfam = sys.argv[2]
 start_lines = ['''#!/bin/bash
 #SBATCH -p priority                         # Partition to run in
@@ -18,6 +19,6 @@ lines = start_lines[0] + '\n' +\
         pfam_dir + '/cOutput/' + pfam + '_ECscores_cor.txt -rw ' +\
         pfam_dir + '/pyOutput/' + pfam + '_weights_plm_input.txt ' +\
         pfam_dir + '/pyOutput/' + pfam + '_2reps_plm_input.txt'
-with open(pfam_dir + '/'+ pfam  +'_cor_submit.sh','w') as file:
+with open(pfam_dir + '/'+ pfam  +'_cor_submit.sh','w+') as file:
     file.writelines(lines)
 
